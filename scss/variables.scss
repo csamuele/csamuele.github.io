@@ -1,4 +1,4 @@
-$main-color: #7FFFD4;
+/*$main-color: #7FFFD4;
 $lighter-shade: #B2FFFF;
 $darker-shade: #00CDCD;
 $accent-color-1: #FF7F50;
@@ -6,4 +6,18 @@ $accent-color-2: #FFD700;
 $accent-color-3: #32CD32;
 $text-color-light: #FFFFFF;
 $text-color-dark: #333333;
-$text-color-accent: #FFFFFF;
+$text-color-accent: #FFFFFF;*/
+
+$main-color: #202020;
+$lighter-shade: #303030;
+$darker-shade: #101010;
+$accent-color-1: #00cc99;
+$accent-color-2: #66ff99;
+$accent-color-3: #00ffcc;
+
+$text-color-light: #ffffff;
+$text-color-dark: #cccccc;
+$text-color-accent: $accent-color-1;
+
+$font-family: "Roboto", sans-serif;
+

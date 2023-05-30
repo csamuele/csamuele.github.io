@@ -4,6 +4,8 @@ body{
     margin: 0;
     padding: 0;
     background-color: $lighter-shade;
+    color: $text-color-light;
+    font-family: $font-family;
 }
 header {
     position: fixed;
@@ -12,13 +14,25 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 20px;
+    height: 50px;
 }
 .title {
-    padding: 0 50px;
+    //padding: 0 20px;
 }
 .navigation-list {
-
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin: 0;
 }
 .navigation-item {
-    display: inline;
+    display: inline-block;
+    padding: 10px
+
+}
+
+main {
+    position: relative;
+    top: 50px;
 }

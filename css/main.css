@@ -1,0 +1,39 @@
+/*$main-color: #7FFFD4;
+$lighter-shade: #B2FFFF;
+$darker-shade: #00CDCD;
+$accent-color-1: #FF7F50;
+$accent-color-2: #FFD700;
+$accent-color-3: #32CD32;
+$text-color-light: #FFFFFF;
+$text-color-dark: #333333;
+$text-color-accent: #FFFFFF;*/
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #303030;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif; }
+
+header {
+  position: fixed;
+  background-color: #202020;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 50px; }
+
+.navigation-list {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin: 0; }
+
+.navigation-item {
+  display: inline-block;
+  padding: 10px; }
+
+main {
+  position: relative;
+  top: 50px; }
