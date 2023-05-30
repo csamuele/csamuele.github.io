@@ -11,13 +11,15 @@ $text-color-accent: #FFFFFF;*/
 $main-color: #202020;
 $lighter-shade: #303030;
 $darker-shade: #101010;
-$accent-color-1: #00cc99;
-$accent-color-2: #66ff99;
-$accent-color-3: #00ffcc;
+$contrast-shade:#c8c8c8;
+$accent-color-1: #657070;
+$accent-color-2: #D1C4B8;
+$accent-color-3: #849AC5;
+$accent-color-4: #A7BDCC;
 
 $text-color-light: #ffffff;
-$text-color-dark: #cccccc;
-$text-color-accent: $accent-color-1;
+$text-color-dark: $darker-shade;
+$text-color-accent: $accent-color-2;
 
 $font-family: "Roboto", sans-serif;
 

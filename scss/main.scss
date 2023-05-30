@@ -3,19 +3,21 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: $lighter-shade;
+    background-color: $accent-color-2;
     color: $text-color-light;
     font-family: $font-family;
 }
 header {
     position: fixed;
-    background-color: $main-color;
+    background-color: $accent-color-2;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
     height: 50px;
+    color: $text-color-dark;
+    box-shadow: 0 2px 5px black;
 }
 .title {
     //padding: 0 20px;
@@ -28,11 +30,46 @@ header {
 }
 .navigation-item {
     display: inline-block;
-    padding: 10px
+    padding: 10px;
+    a {
+        color: $text-color-dark;
+        text-decoration: none;
+    }
+    :hover {
+        color: $accent-color-2;
+    }
 
 }
 
 main {
     position: relative;
     top: 50px;
+    margin: 0 20px;
 }
+  .image-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../Images/samuel-coleman-bear-lake.jpeg");
+    background-size: cover;
+    background-position-y: 67%;
+  }
+  
+  .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .overlay-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .overlay-text h2 {
+    font-size: 1.5rem;
+  }
+  
