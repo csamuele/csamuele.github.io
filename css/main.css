@@ -26,20 +26,26 @@ header {
   color: #101010;
   box-shadow: 0 2px 5px black; }
 
+nav {
+  position: relative;
+  top: 28%; }
+
 .navigation-list {
   display: flex;
-  justify-content: right;
-  align-items: center;
-  margin: 0; }
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin: 0;
+  flex-direction: column; }
 
 .navigation-item {
   display: inline-block;
   padding: 10px; }
   .navigation-item a {
-    color: #101010;
-    text-decoration: none; }
+    color: #ffffff;
+    text-decoration: none;
+    transition: font-size 0.3s ease; }
   .navigation-item :hover {
-    color: #D1C4B8; }
+    font-size: 1.2em; }
 
 main {
   position: relative;
@@ -54,18 +60,32 @@ main {
   background-position-y: 67%; }
 
 .gradient-overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 40%;
   width: 60%;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.88));
-  z-index: 1; }
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.88));
+  z-index: 1;
+  animation: fadeOutRight 0.5s forwards;
+  /* Initial animation to fade out the overlay */ }
+
+@keyframes fadeOutRight {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(100%); } }
+
+@keyframes fadeInRight {
+  0% {
+    transform: translateX(100%); }
+  100% {
+    transform: translateX(0); } }
 
 .overlay-text {
   position: absolute;
-  top: 50%;
+  top: 20%;
   transform: translate(100%, -48%);
   text-align: right;
   color: #ffffff;
@@ -73,6 +93,6 @@ main {
   z-index: 2; }
 
 .overlay-text h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 1rem;
   font-family: "PT Sans", sans-serif; }

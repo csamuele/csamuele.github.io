@@ -19,24 +19,27 @@ header {
     color: $text-color-dark;
     box-shadow: 0 2px 5px black;
 }
-.title {
-    //padding: 0 20px;
+nav {
+    position: relative;
+    top: 28%;
 }
 .navigation-list {
     display: flex;
-    justify-content: right;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-end;
     margin: 0;
+    flex-direction: column;
 }
 .navigation-item {
     display: inline-block;
     padding: 10px;
     a {
-        color: $text-color-dark;
+        color: $text-color-light;
         text-decoration: none;
+        transition: font-size 0.3s ease;
     }
     :hover {
-        color: $accent-color-2;
+        font-size: 1.2em;
     }
 
 }
@@ -55,19 +58,37 @@ main {
   }
   
   .gradient-overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 40%;
     width: 60%;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, .88));
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.88));
     z-index: 1;
+    animation: fadeOutRight 0.5s forwards; /* Initial animation to fade out the overlay */
+    }
+
+@keyframes fadeOutRight {
+  0% {
+    transform: translateX(0);
   }
-  
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
   .overlay-text {
     position: absolute;
-    top: 50%;
+    top: 20%;
     transform: translate(100%, -48%);
     text-align: right;
     color: #ffffff;
@@ -76,7 +97,7 @@ main {
   }
   
   .overlay-text h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 1rem;
     font-family: $header-font;
   }
