@@ -10,18 +10,22 @@
 <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
   <!-- Custom -->
   <link href="css/main.css" rel="stylesheet"/>
-  <script src="/javascript/script.js"></script>
+  <script src="javascript/script.js" defer></script>
 
  </head>
 <body>
-    
+  <header>
+    <button id="hamburger-btn" class="hamburger-btn active">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
   </header>
   <div class="image-container">
-    <div class="gradient-overlay">
+    <div class="gradient-overlay slide-in">
       <nav>
         <div class="navigation-list">
           <h2 class="navigation-item"><a href="#About-Me">About Me</a></h2>
-          <h2 class="navigation-item"><a href="#Skills">Skills</a></h2>
           <h2 class="navigation-item"><a href="#Certifications">Certifications</a></h2>
           <h2 class="navigation-item"><a href="#Projects">Projects</a></h2>
           <h2 class="navigation-item"><a href="#Contact">Contact</a></h2>
@@ -38,9 +42,7 @@
 
     <section id="About-Me">
       <h2>About Me</h2>
-    </section>
-    <section id="Skills">
-      <h2>Skills</h2>
+      <p id="typewriter" class="typewriter"></p>
     </section>
 
     <section id="Certifications">

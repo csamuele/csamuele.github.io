@@ -10,21 +10,43 @@ $text-color-accent: #FFFFFF;*/
 body {
   margin: 0;
   padding: 0;
-  background-color: #D1C4B8;
+  background-color: #849AC5;
   color: #ffffff;
   font-family: "Roboto", sans-serif; }
 
 header {
-  position: fixed;
-  background-color: #D1C4B8;
-  width: 100%;
   display: flex;
-  align-items: center;
+  justify-content: flex-end; }
+
+/* Styles for the hamburger menu */
+.hamburger-btn {
+  position: fixed;
+  top: 15px;
+  right: 10px;
+  width: 40px;
+  height: 24px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  padding: 0 20px;
-  height: 50px;
-  color: #101010;
-  box-shadow: 0 2px 5px black; }
+  background-color: transparent;
+  border: none;
+  cursor: pointer; }
+
+.hamburger-line {
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  transition: transform 0.3s, opacity 0.3s; }
+
+.hamburger-btn.active .hamburger-line:nth-child(2) {
+  opacity: 0; }
+
+.hamburger-btn.active .hamburger-line:nth-child(1) {
+  transform: translateY(10px) rotate(45deg); }
+
+.hamburger-btn.active .hamburger-line:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg); }
 
 nav {
   position: relative;
@@ -47,10 +69,33 @@ nav {
   .navigation-item :hover {
     font-size: 1.2em; }
 
-main {
-  position: relative;
-  top: 50px;
-  margin: 0 20px; }
+main section {
+  height: 100vh;
+  padding: 30px; }
+  main section h2 {
+    font-size: 4rem;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out; }
+    main section h2.active {
+      opacity: 1;
+      transform: translateX(0); }
+  main section p {
+    font-size: 2.5rem; }
+  main section .typewriter {
+    font-family: 'Courier New', Courier, monospace; }
+
+#about-me {
+  background-color: #657070; }
+
+#certifications {
+  background-color: #D1C4B8; }
+
+#projects {
+  background-color: #849AC5; }
+
+#contact {
+  background-color: #A7BDCC; }
 
 .image-container {
   position: relative;
@@ -68,20 +113,11 @@ main {
   width: 60%;
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.88));
   z-index: 1;
-  animation: fadeOutRight 0.5s forwards;
-  /* Initial animation to fade out the overlay */ }
-
-@keyframes fadeOutRight {
-  0% {
-    transform: translateX(0); }
-  100% {
-    transform: translateX(100%); } }
-
-@keyframes fadeInRight {
-  0% {
+  transition: transform 0.7s; }
+  .gradient-overlay.slide-out {
     transform: translateX(100%); }
-  100% {
-    transform: translateX(0); } }
+  .gradient-overlay.slide-in {
+    transform: translateX(0); }
 
 .overlay-text {
   position: absolute;
