@@ -1,4 +1,7 @@
 // ==============================================Gradient overlay menu============================================
+/*this slides the navigation menu into view when the viewport is at the top of the page or when the hamburger
+button is clicked, and it slides the navigation menu back out when the user scrolls or the hamburger menu is clicked*/
+
 const overlay = document.querySelector('.gradient-overlay');
 const hamburgerBtn = document.querySelector('#hamburger-btn');
 const navItems = Array.from(document.getElementsByClassName("navigation-item"));
@@ -27,7 +30,47 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('scroll', handleScroll);
 
 
+//======================================Default intersection observer===================================================
+//This section applies the active class to a specified element when it intersects with the viewport
+
+// Intersection Observer options
+const Options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.5 // Adjust threshold value as needed
+};
+
+// Callback function for the Intersection Observer
+function handleDefaultIntersection(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    } else {
+      entry.target.classList.remove('active');
+    }
+  });
+}
+
+// Create an Intersection Observer instance
+const defaultObserver = new IntersectionObserver(handleDefaultIntersection, Options);
+
+// =======================================h2 effect=================================================================
+//apply default intersection observer to all h2 elements within the main tag
+document.querySelectorAll('main h2').forEach((h2) => {
+  defaultObserver.observe(h2);
+});
+
+
+//=========================================badge card effect========================================================
+//apply default intersection observer to all badge cards
+document.querySelectorAll('.badge-card').forEach(badgeCard => {
+  defaultObserver.observe(badgeCard);
+});
+
+
+
 // ===============================================Typewriter effect=================================================
+//This inserts the string in the text variable to the specified element one letter at a time while appending a '|' at the end to simulate a typwriter effect
 const text = "Meticulous Software Engineer with 2.5 years of experience designing, testing and developing web applications and databases. In-depth understanding of web technologies with focus on delivering innovative business solutions. Works great with team members under Agile and Scrum frameworks.";
 let index = 0;
 let isTyping = false;
@@ -46,12 +89,6 @@ function typeWriter(target) {
   }
 }
 
-// Intersection Observer options
-const typewriterOptions = {
-  root: null,
-  rootMargin: '0px',
-  threshold: 0.5 // Adjust threshold value as needed
-};
 
 // Callback function for the Intersection Observer
 function handleTypewriterIntersection(entries, observer) {
@@ -72,42 +109,10 @@ function handleTypewriterIntersection(entries, observer) {
 }
 
 // Create an Intersection Observer instance
-const typewriterObserver = new IntersectionObserver(handleTypewriterIntersection, typewriterOptions);
+const typewriterObserver = new IntersectionObserver(handleTypewriterIntersection, Options);
 
 // Observe the target element
 const target = document.getElementById("typewriter");
 typewriterObserver.observe(target);
 
 
-//====================================== h2 slide in/out effect===================================================
-// Intersection Observer options
-const sectionHeaderOptions = {
-  root: null,
-  rootMargin: '0px',
-  threshold: 0.1 // Adjust threshold value as needed
-};
-
-// Callback function for the Intersection Observer
-function handleSectionHeaderIntersection(entries, observer) {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('active');
-    } else {
-      entry.target.classList.remove('active');
-    }
-  });
-}
-
-// Create an Intersection Observer instance
-const sectionHeaderObserver = new IntersectionObserver(handleSectionHeaderIntersection, sectionHeaderOptions);
-
-// Observe the h2 elements within the main tag
-document.querySelectorAll('main h2').forEach((h2) => {
-  sectionHeaderObserver.observe(h2);
-});
-
-
-//=========================================badge card effect========================================================
-document.querySelectorAll('.badge-card').forEach(badgeCard => {
-  sectionHeaderObserver.observe(badgeCard);
-});
