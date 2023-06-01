@@ -4,15 +4,36 @@ const hamburgerBtn = document.querySelector('#hamburger-btn');
 const navItems = Array.from(document.getElementsByClassName("navigation-item"));
 
 function toggleOverlay() {
-  overlay.classList.toggle('slide-out');
-  overlay.classList.toggle('slide-in');
+  overlay.classList.toggle('active');
   hamburgerBtn.classList.toggle('active');
+}
+function activateOverlay() {
+  overlay.classList.add('active');
+  hamburgerBtn.classList.add('active');
+}
+function deactivateOverlay() {
+  overlay.classList.remove('active');
+  hamburgerBtn.classList.remove('active');
 }
 
 hamburgerBtn.addEventListener('click', toggleOverlay);
 navItems.forEach(navItem => {
   navItem.addEventListener('click', toggleOverlay);
 });
+document.addEventListener('DOMContentLoaded', () => {
+  if (scrollY < window.innerHeight/2) {
+    activateOverlay();
+  }
+});
+document.addEventListener('scroll', () => {
+  if (scrollY < window.innerHeight/2) {
+    activateOverlay();
+  } else {
+    deactivateOverlay();
+  }
+
+});
+
 
 
 // ===============================================Typewriter effect=================================================
@@ -30,7 +51,7 @@ function typeWriter(target) {
     }
     isCursorVisible = !isCursorVisible;
     index++;
-    setTimeout(() => typeWriter(target), 30); // Pass target element as an argument
+    setTimeout(() => typeWriter(target), 10); // Pass target element as an argument
   }
 }
 
@@ -92,4 +113,10 @@ const sectionHeaderObserver = new IntersectionObserver(handleSectionHeaderInters
 // Observe the h2 elements within the main tag
 document.querySelectorAll('main h2').forEach((h2) => {
   sectionHeaderObserver.observe(h2);
+});
+
+
+//=========================================badge card effect========================================================
+document.querySelectorAll('.badge-card').forEach(badgeCard => {
+  sectionHeaderObserver.observe(badgeCard);
 });
