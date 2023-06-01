@@ -54,20 +54,21 @@ function handleDefaultIntersection(entries, observer) {
 // Create an Intersection Observer instance
 const defaultObserver = new IntersectionObserver(handleDefaultIntersection, Options);
 
-// =======================================h2 effect=================================================================
 //apply default intersection observer to all h2 elements within the main tag
 document.querySelectorAll('main h2').forEach((h2) => {
   defaultObserver.observe(h2);
 });
 
 
-//=========================================badge card effect========================================================
 //apply default intersection observer to all badge cards
 document.querySelectorAll('.badge-card').forEach(badgeCard => {
   defaultObserver.observe(badgeCard);
 });
 
-
+//apply default intersection observer to all project cards
+document.querySelectorAll('.project-card').forEach(projectCard => {
+  defaultObserver.observe(projectCard);
+});
 
 // ===============================================Typewriter effect=================================================
 //This inserts the string in the text variable to the specified element one letter at a time while appending a '|' at the end to simulate a typwriter effect
@@ -115,4 +116,13 @@ const typewriterObserver = new IntersectionObserver(handleTypewriterIntersection
 const target = document.getElementById("typewriter");
 typewriterObserver.observe(target);
 
+//==========================================Project hover effect================================================
+//This makes the description appear when you hover over a link in the projects section
 
+function showDescription(card) {
+  card.classList.add('description-visible');
+}
+
+function hideDescription(card) {
+  card.classList.remove('description-visible');
+}

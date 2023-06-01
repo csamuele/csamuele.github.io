@@ -170,3 +170,44 @@ font-family: $header-font;
         }
     }
 }
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    a {
+        text-decoration: none;
+        color: $text-color-light;
+        width: 50%;
+        .project-card {
+            transform: scale(0);
+            transition: transform 0.7s ease;
+            h3 {
+                font-size: 3rem;
+                margin: 0;
+                transition: font-size 0.7s ease;
+            }
+            p {
+                font-size: 1.5rem;
+                padding: 5px;
+                margin: 0;
+                opacity: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: opacity 0.7s ease, max-height 0.7s ease;
+                    
+            }
+            &.description-visible {
+                p {
+                  opacity: 1;
+                  max-height: 300px;
+                }
+                h3 {
+                    font-size: 3.5rem;
+                }
+            }
+            &.active {
+                transform: scale(1);
+            }
+        }
+    
+    }
+}
