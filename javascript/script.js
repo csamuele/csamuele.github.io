@@ -2,38 +2,29 @@
 const overlay = document.querySelector('.gradient-overlay');
 const hamburgerBtn = document.querySelector('#hamburger-btn');
 const navItems = Array.from(document.getElementsByClassName("navigation-item"));
+const halfWindowHeight = window.innerHeight / 2;
 
 function toggleOverlay() {
   overlay.classList.toggle('active');
   hamburgerBtn.classList.toggle('active');
 }
-function activateOverlay() {
-  overlay.classList.add('active');
-  hamburgerBtn.classList.add('active');
-}
-function deactivateOverlay() {
-  overlay.classList.remove('active');
-  hamburgerBtn.classList.remove('active');
+
+function handleScroll() {
+  const shouldActivate = scrollY < halfWindowHeight;
+  overlay.classList.toggle('active', shouldActivate);
+  hamburgerBtn.classList.toggle('active', shouldActivate);
 }
 
 hamburgerBtn.addEventListener('click', toggleOverlay);
 navItems.forEach(navItem => {
   navItem.addEventListener('click', toggleOverlay);
 });
+
 document.addEventListener('DOMContentLoaded', () => {
-  if (scrollY < window.innerHeight/2) {
-    activateOverlay();
-  }
-});
-document.addEventListener('scroll', () => {
-  if (scrollY < window.innerHeight/2) {
-    activateOverlay();
-  } else {
-    deactivateOverlay();
-  }
-
+  handleScroll();
 });
 
+document.addEventListener('scroll', handleScroll);
 
 
 // ===============================================Typewriter effect=================================================
