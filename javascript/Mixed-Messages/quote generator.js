@@ -13,8 +13,8 @@ function generateInspirationalMessage() {
       messageArr.push(quotes[quoteIndex].Quote);
       messageArr.push(quotes[quoteIndex].Author);
       const message = `${messageArr[0]}\n${messageArr[1]}\n ~${messageArr[2]}`;
-      return message;
       console.log(message);
+      return message;
     })
     .catch(error => {
       console.error('Error fetching quotes:', error);
