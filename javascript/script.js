@@ -126,3 +126,4 @@ function showDescription(card) {
 function hideDescription(card) {
   card.classList.remove('description-visible');
 }
+
