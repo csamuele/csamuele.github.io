@@ -21,7 +21,7 @@ function generateInspirationalMessage() {
     });
 }
 
-//generateInspirationalMessage();
+generateInspirationalMessage();
 //========================================================Quote generator=============================================
 
 function handleQuoteGeneratorButton() {
