@@ -12,6 +12,17 @@ header {
     display: flex;
     justify-content: flex-end;
 }
+a {
+    color: $text-color-light;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: font-size 0.3s ease;
+    &:hover {
+        font-size: 2.5rem;
+        color: $text-color-light;
+    }
+    
+}
 
   
   /* Styles for the hamburger menu */
@@ -63,14 +74,6 @@ nav {
 .navigation-item {
     display: inline-block;
     padding: 10px;
-    a {
-        color: $text-color-light;
-        text-decoration: none;
-        transition: font-size 0.3s ease;
-    }
-    :hover {
-        font-size: 1.2em;
-    }
 
 }
 
@@ -210,5 +213,11 @@ font-family: $header-font;
             }
         }
     
+    }
+}
+.contact {
+    a {
+        display: block;
+        width:fit-content;
     }
 }
