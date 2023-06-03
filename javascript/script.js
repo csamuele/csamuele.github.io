@@ -61,9 +61,9 @@ document.querySelectorAll('main h2').forEach((h2) => {
 
 
 //apply default intersection observer to all badge cards
-document.querySelectorAll('.badge-card').forEach(badgeCard => {
-  defaultObserver.observe(badgeCard);
-});
+// document.querySelectorAll('.badge-card').forEach(badgeCard => {
+//   defaultObserver.observe(badgeCard);
+// });
 
 //apply default intersection observer to all project cards
 document.querySelectorAll('.project-card').forEach(projectCard => {

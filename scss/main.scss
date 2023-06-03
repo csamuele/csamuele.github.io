@@ -165,9 +165,9 @@ font-family: $header-font;
         margin: 0 20px 20px 0;
         background-color: #ffffff5c;
         border-radius: 3px;
-        opacity: 0;
-        transform: scaleY(0);
-        transition: opacity 0.7s ease, transform 0.7s ease;
+        //opacity: 0;
+        //transform: scaleY(0);
+        //transition: opacity 0.7s ease, transform 0.7s ease;
         &.active {
             transform: scaleY(1);
             opacity: 1;
@@ -220,4 +220,15 @@ font-family: $header-font;
         display: block;
         width:fit-content;
     }
+}
+.carousel-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel-indicators {
+    bottom: -50px;
+}
+.carousel-item {
+    transform: translateX(-175px);
 }
