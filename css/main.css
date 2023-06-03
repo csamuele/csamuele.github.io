@@ -53,6 +53,7 @@ a {
 
 nav {
   position: relative;
+  right: 15px;
   top: 28%; }
 
 .navigation-list {
@@ -118,6 +119,7 @@ main section {
 .overlay-text {
   position: absolute;
   top: 20%;
+  padding-right: 20px;
   transform: translate(100%, -48%);
   text-align: right;
   color: #ffffff;
