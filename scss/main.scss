@@ -1,5 +1,10 @@
 @import 'variables';
 @import 'quote-generator.scss';
+@mixin mobile {
+    @media only screen and (max-width: 699px) {
+      @content;
+    }
+  }
 
 body{
     margin: 0;
@@ -119,12 +124,18 @@ main {
 
 
 .image-container {
-position: relative;
-height: 100vh;
-background-image: url("../Images/samuel-coleman-bear-lake.jpeg");
-background-size: cover;
-background-position-y: 67%;
+    position: relative;
+    height: 100vh;
+    background-image: url("../Images/samuel-coleman-bear-lake.jpeg");
+    background-size: cover;
+    background-position-y: 67%;
 }
+@include mobile {
+    .image-container {
+        background-position-x: 30%;
+    }
+}
+
 
 .gradient-overlay {
     position: fixed;
