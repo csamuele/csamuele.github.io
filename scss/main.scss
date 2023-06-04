@@ -26,6 +26,9 @@ a {
         font-size: 2.5rem;
         color: $text-color-light;
     }
+    @include mobile {
+        font-size: 1.6rem;
+    }
     
 }
 
@@ -44,9 +47,6 @@ a {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    @include mobile {
-        transform: scale(2.5);
-    }
   }
   
   .hamburger-line {
@@ -90,6 +90,9 @@ main {
     section {
         height: 100vh;
         padding: 30px;
+        @include mobile {
+            padding: 15px;
+        }
         h2 {
             font-size: 4rem;
             opacity: 0;
@@ -99,12 +102,18 @@ main {
                 opacity: 1;
                 transform: translateX(0);
             }
+            @include mobile {
+                font-size: 3.7rem;
+            }
               
           }
           
         
         p {
             font-size: 2.5rem;
+            @include mobile {
+                font-size: 1.6rem;
+            }
         }
         .typewriter {
             font-family: 'Courier New', Courier, monospace;
@@ -172,6 +181,9 @@ z-index: 2;
 font-size: 4rem;
 margin-bottom: 1rem;
 font-family: $header-font;
+@include mobile {
+    font-size: 3rem;
+}
 }
 
 .cert-container {

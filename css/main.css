@@ -20,6 +20,9 @@ a {
   a:hover {
     font-size: 2.5rem;
     color: #ffffff; }
+  @media (max-width: 557px) {
+    a {
+      font-size: 1.6rem; } }
 
 /* Styles for the hamburger menu */
 .hamburger-btn {
@@ -35,9 +38,6 @@ a {
   background-color: transparent;
   border: none;
   cursor: pointer; }
-  @media (max-width: 557px) {
-    .hamburger-btn {
-      transform: scale(2.5); } }
 
 .hamburger-line {
   width: 100%;
@@ -73,6 +73,9 @@ nav {
 main section {
   height: 100vh;
   padding: 30px; }
+  @media (max-width: 557px) {
+    main section {
+      padding: 15px; } }
   main section h2 {
     font-size: 4rem;
     opacity: 0;
@@ -81,8 +84,14 @@ main section {
     main section h2.active {
       opacity: 1;
       transform: translateX(0); }
+    @media (max-width: 557px) {
+      main section h2 {
+        font-size: 3.7rem; } }
   main section p {
     font-size: 2.5rem; }
+    @media (max-width: 557px) {
+      main section p {
+        font-size: 1.6rem; } }
   main section .typewriter {
     font-family: 'Courier New', Courier, monospace; }
 
@@ -137,6 +146,9 @@ main section {
   font-size: 4rem;
   margin-bottom: 1rem;
   font-family: "PT Sans", sans-serif; }
+  @media (max-width: 557px) {
+    .overlay-text h1 {
+      font-size: 3rem; } }
 
 .cert-container {
   display: flex;
