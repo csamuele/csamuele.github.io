@@ -1,7 +1,7 @@
 @import 'variables';
 @import 'quote-generator.scss';
 @mixin mobile {
-    @media only screen and (max-width: 699px) {
+    @media (max-width: 557px) {
       @content;
     }
   }
@@ -44,6 +44,9 @@ a {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    @include mobile {
+        transform: scale(2.5);
+    }
   }
   
   .hamburger-line {
@@ -68,7 +71,7 @@ a {
 nav {
     position: relative;
     right: 15px;
-    top: 28%;
+    top: 36%;
 }
 .navigation-list {
     display: flex;

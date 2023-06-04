@@ -35,6 +35,9 @@ a {
   background-color: transparent;
   border: none;
   cursor: pointer; }
+  @media (max-width: 557px) {
+    .hamburger-btn {
+      transform: scale(2.5); } }
 
 .hamburger-line {
   width: 100%;
@@ -54,7 +57,7 @@ a {
 nav {
   position: relative;
   right: 15px;
-  top: 28%; }
+  top: 36%; }
 
 .navigation-list {
   display: flex;
@@ -102,7 +105,7 @@ main section {
   background-size: cover;
   background-position-y: 67%; }
 
-@media only screen and (max-width: 699px) {
+@media (max-width: 557px) {
   .image-container {
     background-position-x: 30%; } }
 
