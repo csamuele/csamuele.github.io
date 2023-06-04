@@ -20,6 +20,9 @@ a {
   a:hover {
     font-size: 2.5rem;
     color: #ffffff; }
+  @media (max-width: 557px) {
+    a {
+      font-size: 1.6rem; } }
 
 /* Styles for the hamburger menu */
 .hamburger-btn {
@@ -35,9 +38,6 @@ a {
   background-color: transparent;
   border: none;
   cursor: pointer; }
-  @media (max-width: 557px) {
-    .hamburger-btn {
-      transform: scale(2.5); } }
 
 .hamburger-line {
   width: 100%;
@@ -83,6 +83,9 @@ main section {
       transform: translateX(0); }
   main section p {
     font-size: 2.5rem; }
+    @media (max-width: 557px) {
+      main section p {
+        font-size: 1.6rem; } }
   main section .typewriter {
     font-family: 'Courier New', Courier, monospace; }
 
@@ -137,6 +140,9 @@ main section {
   font-size: 4rem;
   margin-bottom: 1rem;
   font-family: "PT Sans", sans-serif; }
+  @media (max-width: 557px) {
+    .overlay-text h1 {
+      font-size: 3rem; } }
 
 .cert-container {
   display: flex;
