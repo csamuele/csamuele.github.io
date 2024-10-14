@@ -94,6 +94,8 @@ main section {
         font-size: 1.6rem; } }
   main section .typewriter {
     font-family: 'Courier New', Courier, monospace; }
+  main section#About-Me {
+    height: 150vh; }
 
 #about-me {
   background-color: #657070; }
