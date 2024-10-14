@@ -72,7 +72,7 @@ document.querySelectorAll('.project-card').forEach(projectCard => {
 
 // ===============================================Typewriter effect=================================================
 //This inserts the string in the text variable to the specified element one letter at a time while appending a '|' at the end to simulate a typwriter effect
-const text = "Meticulous Software Engineer with 2.5 years of experience designing, testing and developing web applications and databases. In-depth understanding of web technologies with focus on delivering innovative business solutions. Works great with team members under Agile and Scrum frameworks.";
+const text = "Detail-oriented software developer with a strong background in web development and technical support. Proven ability to rapidly onboard, collaborate with cross-functional teams, and deliver high-impact solutions using technologies like React, TypeScript, Node, and Express. Skilled in API development and documentation, with hands-on experience using GitHub for version control and Swagger for backend design. Consistently achieves high customer satisfaction ratings by solving complex technical challenges and driving user-centric solutions. Seeking to leverage a blend of problem-solving abilities, technical expertise, and fast-learning aptitude to excel in a software engineering role.";
 let index = 0;
 let isTyping = false;
 let isCursorVisible = true;
@@ -126,4 +126,3 @@ function showDescription(card) {
 function hideDescription(card) {
   card.classList.remove('description-visible');
 }
-
